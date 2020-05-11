@@ -1,5 +1,6 @@
 # rpi_ADCP_datalogger
-Setup required to log data from a Rowetech ADCP to a Raspberry Pi
+Setup required to log data from a Rowetech ADCP to a Raspberry Pi (RPi)
+- Instructions include all steps to setup RPi as a local hotspot to control Rpi via tablet.
 
 Note: Credit to @rowetechinc and @ricorx7 for source code (rowetechinc/rpi_datalogger). All code and files are modified for use on a Rowetech SeaWave ADCP and instructions to setup the Raspberry Pi are compiled from various sources. 
 
