@@ -9,7 +9,7 @@ Other notes: make sure to update your Rpi to latest version via internet connect
 Instructions for setting up Raspberry Pi as a datalogger are listed under /rpi_ADCP_datalogger/RPI_setup
 
 The goal of the datalogger is to read ADCP binary data from a RS-485 USB adapter. This guide assumes the user knows basic linux operations, file/folder permissions and editing system files.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 General steps
 
 1. Download all files from rpi_ADCP_datalogger to a folder on desktop.
@@ -33,6 +33,10 @@ General steps
 
 10. Once data is coming in, it should be located in the /mnt/usb folder
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+********************************************
 To create a wireless local access point:
+
+Follow instructions here: https://www.raspberrypi.org/documentation/configuration/wireless/access-point-routed.md
+
+Once you have this set up, you can install VNC Viewer and control the Raspberry Pi setup wirelessly (in our case, standing on a boat).
 
