@@ -5,4 +5,5 @@ Note: Credit to @rowetechinc and @ricorx7 for source code (rowetechinc/rpi_datal
 
 Other notes: make sure to update your Rpi to latest version via internet connection, including python. Python dependencies are listed under rpi_ADCP_datalogger/Python_requirements
 
-Instructions for setting up Rpi are listed under /rpi_ADCP_datalogger/rpi_setup
+Instructions for setting up Raspberry Pi as a datalogger are listed under /rpi_ADCP_datalogger/RPI_setup
+
