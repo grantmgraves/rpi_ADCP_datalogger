@@ -1,0 +1,1 @@
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0856", ATTRS{idProduct}=="ac11", SYMLINK+="rs485"

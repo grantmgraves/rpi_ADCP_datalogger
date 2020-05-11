@@ -1,0 +1,11 @@
+[Unit]
+Description="RTI Download server.  Download all recorded data."
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/rti/gohttpserver-linux-arm -r /mnt/usb --addr :8000
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

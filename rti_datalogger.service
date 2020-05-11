@@ -1,0 +1,12 @@
+[Unit]
+Description="RTI Datalogger to record serial data"
+After=multi-user.target
+
+[Service]
+Type=idle
+Environment=PYTHONPATH=/home/pi/rti/python/rti_python
+ExecStart=/usr/bin/python3 /home/pi/rti/python/rti_python/Utilities/SerialDataRecorder.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
