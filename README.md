@@ -2,9 +2,9 @@
 Setup required to log data from a Rowetech ADCP to a Raspberry Pi (RPi)
 - Instructions include all steps to setup RPi as a local hotspot to control Rpi via tablet.
 
-Note: Credit to @rowetechinc and @ricorx7 for source code (rowetechinc/rpi_datalogger). All code and files are modified for use on a Rowetech SeaWave ADCP and instructions to setup the Raspberry Pi are compiled from various sources. *
+Note: Credit to @rowetechinc and @ricorx7 for source code (https://github.com/rowetechinc/rpi_datalogger). All code and files are modified for use on a Rowetech SeaWave ADCP and instructions to setup the Raspberry Pi are compiled from various sources. *
 
-Other notes: make sure to update your Rpi to latest version via internet connection, including python. Python dependencies are listed under rpi_ADCP_datalogger/Python_requirements
+Other notes: make sure to update your Rpi to latest version via internet connection, including python. Python dependencies are listed under rpi_ADCP_datalogger/Python_requirements and MUST be installed on Python 3 and the system before continuing.
 
 Instructions for setting up Raspberry Pi as a datalogger are listed under /rpi_ADCP_datalogger/RPI_setup
 
@@ -16,7 +16,7 @@ General steps
 
 2. Mount USB drive to boot to /mnt/usb (https://www.raspberrypi.org/documentation/configuration/external-storage.md) and set permissions to read-write-execute in the cmd line (VERY IMPORTANT!): sudo chmod a+rwx /mnt/usb 
 
-3. Create directories for /home/pi/rti, change Raspberry Pi permissions to read and write for the following folders, and apply permissions also to /lib/systemd/system
+3. Create directories for /home/pi/rti, change Raspberry Pi permissions to read and write for the following folders, and apply permissions also to /lib/systemd/system AND /etc/udev/rules.d/
 
 4. Copy SerialDataRecorder_rs485.py to home/pi/rti or another suitable easy place to access it (desktop)
 
@@ -25,8 +25,14 @@ General steps
 6.  sudo systemctl daemon-reload
     sudo systemctl enable rti_downloadserver.service
     
-7. In order to maintain a peristent name for the usb to rs485 converter, we need to change the port name to recognize it every time, depending on where it's plugged in. In order to do this, copy the 
+7. In order to maintain a peristent name for the usb to rs485 converter, we need to change the port name to recognize it every time,     depending on where it's plugged in. In order to do this, copy the '99-usb-serial.rules' file to the /etc/udev/rules.d/ 
 
-7. Setup ADCP using PulseWaves and prepare a start time, unplug RS485 from ADCP into Raspberry Pi
+8. Setup ADCP using PulseWaves and prepare a start time, unplug RS485 from ADCP and plug into Raspberry Pi
 
-8. 
+9. Go to your SerialDataRecorder_rs485.py and Edit IDLE, then run code. You should receive some red output text indicating a successful connection to the RS-485 adapter.
+
+10. Once data is coming in, it should be located in the /mnt/usb folder
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To create a wireless local access point:
+
