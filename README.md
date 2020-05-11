@@ -20,9 +20,10 @@ General steps
 
 4. Copy SerialDataRecorder_rs485.py to home/pi/rti or another suitable easy place to access it (desktop)
 
-5. Copy rti_datalogger.service, rti_downloadserver.service to /lib/systemd/system. rti_datalogger.timer is optional and you can modify the time you want to delay the service to begin, but it isn't necessary as long as you run the following in step 5.
+5. Copy rti_datalogger.service, rti_downloadserver.service to /lib/systemd/system. rti_datalogger.timer is optional and you can modify the time you want to delay the service to begin, but it isn't necessary as long as you run the following in step 6.
 
-6.  sudo systemctl daemon-reload
+6. ~~~~~~
+    sudo systemctl daemon-reload
     sudo systemctl enable rti_downloadserver.service
     
 7. In order to maintain a peristent name for the usb to rs485 converter, we need to change the port name to recognize it every time,     depending on where it's plugged in. In order to do this, copy the '99-usb-serial.rules' file to the /etc/udev/rules.d/ 
