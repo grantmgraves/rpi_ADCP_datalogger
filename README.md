@@ -29,7 +29,7 @@ General steps
 
 8. Setup ADCP using PulseWaves and prepare a start time, unplug RS485 from ADCP and plug into Raspberry Pi
 
-9. Go to your SerialDataRecorder_rs485.py and Edit IDLE, then run code. You should receive some red output text indicating a successful connection to the RS-485 adapter.
+9. Go to your SerialDataRecorder_rs485.py and Edit IDLE, then run code. You should receive some red output text indicating a successful connection to the RS-485 adapter and a printed output to wherever the python code is running that indicates datalogger is connected. *TO-DO: Automate this step.
 
 10. Once data is coming in, it should be located in the /mnt/usb folder
 
